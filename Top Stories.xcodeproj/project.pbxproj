@@ -22,6 +22,7 @@
 		C98F4B6C221DC2A0003804FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C98F4B6F221DC2A0003804FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C98F4B71221DC2A0003804FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C98F4B77221DC6B5003804FD /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				C98F4B6C221DC2A0003804FD /* Assets.xcassets */,
 				C98F4B6E221DC2A0003804FD /* LaunchScreen.storyboard */,
 				C98F4B71221DC2A0003804FD /* Info.plist */,
+				C98F4B77221DC6B5003804FD /* SwiftyJSON.h */,
 			);
 			path = "Top Stories";
 			sourceTree = "<group>";
