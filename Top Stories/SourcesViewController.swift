@@ -13,6 +13,10 @@ class SourcesViewController: UITableViewController {
     var sources = [[String: String]]()
     let apiKey = "5d892509a49046a087917c466fa80d09"
     
+    @IBAction func onTappedDoneButton(_ sender: Any) {
+        exit(0)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "News Sources"
@@ -67,6 +71,12 @@ class SourcesViewController: UITableViewController {
         cell.textLabel?.text = source["name"]
         cell.detailTextLabel?.text = source["description"]
         return cell
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! ArticlesViewController
+        let index = tableView.indexPathForSelectedRow?.row
+        dvc.source = sources[index!]
+        dvc.apiKey = apiKey
     }
 }
 

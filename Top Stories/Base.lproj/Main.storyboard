@@ -32,11 +32,17 @@
                             <outlet property="delegate" destination="KGg-p2-p1t" id="Dqn-jw-XGb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ect-xa-d6R"/>
+                    <navigationItem key="navigationItem" id="Ect-xa-d6R">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fKe-69-g6W">
+                            <connections>
+                                <action selector="onTappedDoneButton:" destination="KGg-p2-p1t" id="R6e-bT-jhu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3C-OX-kht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="134.48275862068968"/>
+            <point key="canvasLocation" x="646" y="235"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="o6V-AY-3DX">
@@ -50,11 +56,41 @@
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="KGg-p2-p1t" kind="relationship" relationship="rootViewController" id="OYR-yB-Zjn"/>
+                        <segue destination="hVL-x9-tNS" kind="show" id="GT4-fn-FyW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffr-ac-Ogm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7.2000000000000002" y="134.48275862068968"/>
+            <point key="canvasLocation" x="-572" y="236"/>
+        </scene>
+        <!--Articles View Controller-->
+        <scene sceneID="qpn-UA-wTQ">
+            <objects>
+                <tableViewController id="hVL-x9-tNS" customClass="ArticlesViewController" customModule="Top_Stories" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dNT-v4-X5t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="eHb-pT-Wu1">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eHb-pT-Wu1" id="tdv-4J-bPt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hVL-x9-tNS" id="Zpd-XH-aE2"/>
+                            <outlet property="delegate" destination="hVL-x9-tNS" id="z63-kD-Yg6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="A2t-ax-Ixu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1KD-8t-kXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="-492"/>
         </scene>
     </scenes>
 </document>

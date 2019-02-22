@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArticlesViewController: UIViewController {
+class ArticlesViewController: UITableViewController {
     var articles = [[String: String]]()
     var source = [String: String]()
     var apiKey = ""
@@ -67,5 +67,9 @@ class ArticlesViewController: UIViewController {
         cell.textLabel?.text = article["title"]
         cell.detailTextLabel?.text = article["description"]
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = URL(string: articles[indexPath.row]["url"]!)
+        UIApplication.shared.open(url! as URL, options: [:], completionHandler: nil)
     }
 }
